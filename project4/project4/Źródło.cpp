@@ -4,7 +4,7 @@ int main()
 {
 	int variable = 8;
 
-	int* ptr;
+	int* ptr = 0;
 	
 	std::cout << ptr << std::endl;
 	
