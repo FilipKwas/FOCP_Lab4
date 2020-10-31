@@ -9,7 +9,7 @@ int main() {
  
     std::map<std::string, std::vector<int>> dictionary;
        
-    std::ifstream input("TextFile3.txt");
+    std::ifstream input("TextFil3.txt");
 
         if (input.is_open()) {
 
