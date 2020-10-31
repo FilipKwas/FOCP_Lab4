@@ -1,29 +1,28 @@
 #include <iostream>
+#include <array>
 
-int main() 
+int main()
 {
-	int variable = 8;
+	std::array<int, 4> numbers;
 
-	int* ptr = 0;
+	for (int i = 0; i < 4; i++)
+	{
+		numbers[i] = i;
+	}
+
+//	std::cout << numbers[0] << std::endl;
+//	std::cout << numbers[1] << std::endl;
+//	std::cout << numbers[2] << std::endl;
+//	std::cout << numbers[3] << std::endl;
+
+	int* ptr_numbers = &numbers[0];
 	
-	std::cout << ptr << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		std::cout << *ptr_numbers << std::endl;
+		++ptr_numbers;
+
+	}
 	
-	std::cout << "Memory address of variable: " << &variable << std::endl;
-	std::cout << "Memory address of ptr: " << &ptr << std::endl;
-	
-	ptr = &variable;
-	
-	std::cout << *ptr << std::endl;
-
-	*ptr = 25; 
-
-	std::cout << variable << std::endl;
-
-	variable = 15;
-
-	std::cout << *ptr << std::endl;
-
-
-
 	return 0;
 }
